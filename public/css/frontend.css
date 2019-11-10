@@ -1,0 +1,221 @@
+*{
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+    a{
+      color : black;
+      text-decoration: none !important;
+    }
+
+    .mb-10{
+      margin-bottom : 6rem;
+    }
+
+    .nav-search{
+        position : absolute;
+        right : 0;
+        border-radius: 40px;
+        border :1px solid olivedrab;
+        padding : 5px;
+        background: white;
+        margin-right : 20px;
+        z-index: 100;
+    }
+
+    .custom{
+        width : 0; 
+        border : none;
+        outline: none;
+        background : none;
+        padding : 0;
+        transition: all 1s;
+    }
+    .btn-search{
+        border-radius: 50%;
+        color : black;
+        background : none;;
+        border: none;
+        outline: none;
+    }
+
+    .nav-search:hover .custom{
+        width: 300px;
+    }
+
+    .sub-dropdown{
+      position : relative;
+    }
+
+    .sub-dropdown .sub-menu{
+      position : absolute;
+      background : gray;
+      display : none;
+      z-index: 1;
+    }
+
+    .sub-dropdown:hover .sub-menu{
+      display : block;
+    }
+
+    .overall{
+      position: absolute;
+      bottom: 5%;
+      left : 10%;
+      width : 85%;
+      font-size : 14px;
+    }
+
+    .loaitin{
+      margin-top : 20px;
+      margin-bottom : 10px;
+      font-size : 14px;
+    }
+
+    .loaitin a{
+      background : #78b43d;
+      padding : 5px 10px;
+      color : white;
+      text-decoration : none;
+      transition : all 0.4s;
+    }
+
+    .loaitin a:hover{
+      background : #639630;
+      color : rgb(212, 209, 209);
+    }
+
+    .image{
+      width : 100%;
+    }
+
+    /* .image-90{
+      width : 100%;
+    } */
+
+    .overall-recent-post{
+      font-size : 16px;
+    }
+
+    .class{
+      position : relative;
+      display : block;
+      overflow: hidden;
+    }
+
+    .lastest{
+        color : white;
+        position: absolute;
+        top : 17px;
+        right: -30px;
+        background : #78b43d;
+        padding : 5px 42px;
+        transform: rotate(40deg);
+    }
+
+    /* .img750{
+      position : relative;
+      overflow: hidden;
+    }
+
+    .process-img750{
+      position: absolute;
+      top : 0;
+      right: 0;
+      background : red;
+      transform : rotate(30deg);
+    } */
+
+  .edit{
+      position : relative;
+  }
+
+.mt-6{
+margin-top : 5rem;
+}
+
+
+#menu-toggle{
+  position: relative;
+}
+
+#sub-menu-toggle{
+  padding :0;
+  list-style : none;
+  position: absolute;
+  right : 10px;
+  background : white;
+  box-shadow: 0 0 5px rgb(161, 161, 161);
+  text-align : center;
+  width : 200px;
+  display : none;
+  z-index : 100;
+}
+
+#sub-menu-toggle li{
+  padding : 10px;
+}
+
+.bg{
+  background : #78b43d !important;
+}
+
+.menu-custom:hover{
+  background : #639630;
+}
+
+.menu-sub-custom{
+  color: white;
+}
+.menu-sub-custom:hover{
+  color: black;
+}
+a:hover{
+  color : #78b43d;
+}
+
+.overall-content a{
+  color:white !important;
+}
+
+.overall-content a:hover{
+  text-decoration: underline !important;
+}
+
+.footer{
+  padding:15px;
+  background: #78b43d;
+}
+
+.ngayviet span{
+  font-size : 12px;
+}
+
+.page-tinlienquan-image img{
+  float : left;
+}
+
+.page-tinlienquan-title{
+  float :left;
+}
+
+.frame{
+  display : inline-block;
+  background : rgb(221, 220, 220);
+  padding: 15px;
+  border-radius : 100%;
+}
+
+div.class > a > img:hover{
+  transform: scale(1.2,1.2);
+  transition: 1s;
+}
+
+.khungbinhluan{
+  box-shadow : 0px 0px 8px rgb(163, 162, 162);
+}
+
+#sub-menu-toggle li:hover a{
+  display : block;
+  background :white;
+  color:black !important;
+}
