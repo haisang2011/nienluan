@@ -89,7 +89,7 @@ class NhomNguoiDungController extends Controller
     {
         $nnd = NhomNguoiDung::find($id);
         if($nnd->nnd_ma == 1 && Auth::user()->nd_taiKhoan != "root"){
-            return view('Backend.layout.errorEditUser');
+            return view('Backend.layout.error');
         }
         $quyen = Quyen::all();
         $show = DB::table('nhomnguoidung_quyen')->join('quyen', 'nhomnguoidung_quyen.q_ma', '=', 'quyen.q_ma')
