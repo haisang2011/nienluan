@@ -55,11 +55,11 @@ Route::group(['middleware' => ['CheckQuyen7']], function(){
     });
     
     Route::get('admin/quyen/index', 'Backend\QuyenController@index')->name('Backend.quyen.index');
-    Route::get('admin/quyen/create', 'Backend\QuyenController@create')->name('Backend.quyen.create');
-    Route::post('admin/quyen/store', 'Backend\QuyenController@store')->name('Backend.quyen.store');
-    Route::get('admin/quyen/edit/{id}', 'Backend\QuyenController@edit')->name('Backend.quyen.edit');
-    Route::put('admin/quyen/update/{id}', 'Backend\QuyenController@update')->name('Backend.quyen.update');
-    Route::delete('admin/quyen/delete/{id}', 'Backend\QuyenController@destroy')->name('Backend.quyen.delete');
+    // Route::get('admin/quyen/create', 'Backend\QuyenController@create')->name('Backend.quyen.create');
+    // Route::post('admin/quyen/store', 'Backend\QuyenController@store')->name('Backend.quyen.store');
+    // Route::get('admin/quyen/edit/{id}', 'Backend\QuyenController@edit')->name('Backend.quyen.edit');
+    // Route::put('admin/quyen/update/{id}', 'Backend\QuyenController@update')->name('Backend.quyen.update');
+    // Route::delete('admin/quyen/delete/{id}', 'Backend\QuyenController@destroy')->name('Backend.quyen.delete');
     
     Route::group(['middleware' => ['Quyen8']], function () {
         Route::get('admin/nhomnguoidung/index', 'Backend\NhomNguoiDungController@index')->name('Backend.nhomnguoidung.index');

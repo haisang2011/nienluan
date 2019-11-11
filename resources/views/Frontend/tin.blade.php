@@ -112,9 +112,7 @@
                                 <strong>{{$comments->nd_hoTen}}</strong>
                                 <div class="ml-5 cmt">{{$comments->bl_noiDung}}</div>
                                 <span class="ml-5" style="font-size:12px"><i>{{date('d/m/Y | H:i:s',strtotime($comments->bl_taoMoi))}}</i></span>
-                                @if($comments->nd_ma != $auth->nd_ma)
-                                    <span onclick="show({{$i}})" class="ml-5" style="color:blue;cursor:pointer">Trả lời</span> 
-                                @endif
+                                <span onclick="show({{$i}})" class="ml-5" style="color:blue;cursor:pointer">Trả lời</span> 
                                 {{-- comments sub  --}}
                                 <div class="comment_sub ml-5" style="display:none;">
                                     <textarea name="binhluan_sub" class="binhluan" cols="40" rows="3" placeholder="Hãy nghĩ gì về tin này" style="display:block"></textarea>
