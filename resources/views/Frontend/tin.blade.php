@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h2 class="my-5">{{$tin->tt_tieuDe}}</h2>
-                    <p class="my-3"><i style="font-size:13px;">Được viết lúc : {{date('d/m/Y | H:i:s')}}</i></p>
+                    <p class="my-3"><i style="font-size:13px;">Được viết lúc : {{date('d/m/Y | H:i:s',strtotime($tin->tt_taoMoi))}}</i></p>
                     <p class="my-3">Số lượt xem : {{$tin->tt_soLuotXem}}</p>
                     <p  class="my-5"><strong>{!! $tin->tt_tomTat !!}</strong></p>
                     {!! $tin->tt_noiDung !!}
