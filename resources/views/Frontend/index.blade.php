@@ -22,6 +22,44 @@
     <!-- Container -->
     <div class="container">
 
+    <div class="chatbot-circle"><i class="fas fa-sms"></i></div>
+    <div class="chatbot-box">
+        <div class="chatbot-head">
+            <div class="avatar">
+                <span class="icon"><img src="{{asset('chatbot.png')}}" width="30" height="30" alt="Avatar Chatbot"></span>
+                <span class="name-chatbot">ChatBot News</span>
+                <span class="status"></span>
+            </div>
+            <span class="close"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="chatbot-body">
+            <div style="margin-top:15px;"></div>
+            {{-- Section Messages --}}
+            {{-- <div class="res-bot">
+                <div class="block-icon">
+                    <div class="res-avatar"><i class="fas fa-comment-alt"></i></div>
+                </div>
+                <div class="block-messages" style="35%">
+                    <div class="res-messages"><span>Nguyen Huynh Hai Sang la</span> </div>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+            <div class="res-u">
+                <div class="block-messages-u">
+                    <div class="res-messages-u"><span>Nguyen Huynh Hai Sang la</span> </div>
+                </div>
+            </div>
+            <div style="clear:both;" class="bottom"></div> --}}
+            {{-- =================================================== --}}
+
+            {{-- End Section Messages --}}
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" placeholder="Type a message..." class="type-message">
+            <button class="submit-chatbot" ><img src="{{asset('send.png')}}" alt="Icon Send" srcset=""></button>
+        </div>
+    </div>
+
     <!-- Bài viết mới nhất -->
     {{-- @include('Frontend.widgets.newposts', [$newpost_2 = $newpost_2]); --}}
     <?php
@@ -289,11 +327,97 @@ $loaitin1 = $tin->shift();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
     <script>
         $(document).ready(function(){
-          $("#toggle").click(function(){
+        var socket = io.connect("http://localhost:5000/");
+// 15% -> 7 letters
+// 20% -> 9 letters
+// 35% -> 19 letters
+//>19 ---
+// 65% -> > 19 letters
+                
+            socket.on('my response', function(msg) {
+                    console.log(msg)
+                });
+
+            $(".submit-chatbot").click(function(){
+                var message = $(".type-message").val();
+                var check_letters = 1;
+                var messages = message.length
+                socket.emit('Client-Send-Data', {data:message});
+
+                if(messages <= 7){
+
+                }else if(messages > 7 && messages <= 9){
+                    check_letters = 2;
+                }else if(messages > 9 && messages <= 19){
+                    check_letters = 3;
+                }else{
+                    check_letters = 4;
+                }
+
+                if(check_letters == 1){
+                    $(".chatbot-body").append('<div class="res-u"><div class="block-messages-u" style="width:15%; text-align:center;"><div class="res-messages-u"><span>'+message+'</span></div></div></div><div style="clear:both;" class="bottom"></div>');
+                }else if(check_letters == 2){
+                    $(".chatbot-body").append('<div class="res-u"><div class="block-messages-u" style="width:20%; text-align:center;"><div class="res-messages-u"><span>'+message+'</span></div></div></div><div style="clear:both;" class="bottom"></div>');
+                }else if(check_letters == 3){
+                    $(".chatbot-body").append('<div class="res-u"><div class="block-messages-u" style="width:35%; text-align:center;"><div class="res-messages-u"><span>'+message+'</span></div></div></div><div style="clear:both;" class="bottom"></div>');
+                }else{
+                    $(".chatbot-body").append('<div class="res-u"><div class="block-messages-u" style="width:65%"><div class="res-messages-u"><span>'+message+'</span></div></div></div><div style="clear:both;" class="bottom"></div>');
+                }
+
+                $(".type-message").val("");
+
+            });
+            
+
+            socket.on('Server-Send-Data', function(data){
+
+                var message = data['data'];
+                var check = 1;
+                var messages = message.length
+
+                if(messages <= 7){
+
+                }else if(messages > 7 && messages <= 9){
+                    check = 2;
+                }else if(messages > 9 && messages <= 19){
+                    check = 3;
+                }else{
+                    check = 4;
+                }
+
+                if(check == 1){
+                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages"><span>'+message+'</span> </div></div></div><div style="clear:both;"></div>');
+                    $(".block-messages:last").css({"width":"15%","text-align":"center"});
+                }else if(check == 2){
+                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages"><span>'+message+'</span> </div></div></div><div style="clear:both;"></div>');
+                    $(".block-messages:last").css({"width":"20%","text-align":"center"});
+                }else if(check == 3){
+                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages"><span>'+message+'</span> </div></div></div><div style="clear:both;"></div>');
+                    $(".block-messages:last").css({"width":"35%","text-align":"center"});
+                }else{
+                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages"><span>'+message+'</span> </div></div></div><div style="clear:both;"></div>');
+                    $(".block-messages:last").css("width","65%");
+                }
+            });
+
+            //End ChatBot
+
+            $(".close").click(function(){
+                $(".chatbot-box").css("display","none");
+                $('.chatbot-circle').css('display','block');
+            });
+
+            $('.chatbot-circle').click(function(){
+                $('.chatbot-circle').css('display','none');
+                $(".chatbot-box").css("display","block");
+            })
+
+            $("#toggle").click(function(){
             $("#sub-menu-toggle").toggle();
-          });
+            });
         });
       </script>
   </body>
