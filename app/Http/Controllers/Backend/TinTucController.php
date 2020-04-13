@@ -110,7 +110,7 @@ class TinTucController extends Controller
             $tintuc->tt_hinhAnh = $filenametostore;
      
             //Upload File
-            $request->file('tt_hinhAnh')->storeAs('public/photos', $filenametostore);
+            $request->file('tt_hinhAnh')->storeAs('public/photos/', $filenametostore);
      
             //Resize image here
             $thumbnailpath = public_path('storage/photos/'.$filenametostore);
