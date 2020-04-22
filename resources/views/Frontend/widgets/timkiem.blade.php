@@ -31,12 +31,12 @@
 
                     @foreach($timkiem as $tins)
                     <div class="col-lg-4 mb-5">
-                        <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                        <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                             <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
                         </a>
                     </div>
                     <div class="col-lg-8 mb-5">
-                        <h5><strong><a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a></strong></h5>
+                        <h5><strong><a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a></strong></h5>
                         <p class="mt-3">{{$tins->tt_tomTat}}</p>
                     </div>
                     @endforeach

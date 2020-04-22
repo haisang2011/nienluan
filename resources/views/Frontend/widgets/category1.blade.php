@@ -25,20 +25,20 @@
         @foreach($tin as $tins)
             <div class="col-lg-4">
                 <div class="class">
-                <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                     <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
                 </a>
                 </div>
                 <div class="overall-recent-post mb-5">
                     <div class="loaitin">
-                    <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
+                    <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
                     </div>
                     <div class="ngayviet">
                         <i><span>{{date('d/m/Y | H:i',strtotime($tins->tt_capNhat))}}</span></i>
                     </div>
                     <div class="overall-content-recent-post">
                         <h5>
-                            <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a>
+                            <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a>
                         </h5>
                     </div>
                 </div>

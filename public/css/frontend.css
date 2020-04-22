@@ -278,8 +278,12 @@ div.class > a > img:hover{
 .close{
   cursor: pointer;
   position: absolute;
-  left: 8px;
+  right: 8px;
   top: 0;
+}
+
+.close:hover{
+  color: rgb(243, 54, 54);
 }
 
 .icon img{
@@ -326,9 +330,9 @@ div.class > a > img:hover{
 }
 
 .block-messages{
-  text-align: justify;
+  text-align: left;
   float: left;
-  width : 70%;
+  width : 76%;
   margin-left: 10px;
 }
 
@@ -342,11 +346,15 @@ div.class > a > img:hover{
   font-family: "Avenir Next","Helvetica Neue",Helvetica,sans-serif;
   font-size: 14px;
   word-wrap: break-word;
-  word-break: break-all;  
+  word-break: break-word;  
   padding : 10px;
   background : #f1f0f0;
   color:#6e7a89;
   border-radius: 10px;
+}
+
+.res-messages001{
+  text-align: left;
 }
 
 .res-u, .res-bot{
@@ -377,6 +385,7 @@ div.class > a > img:hover{
 }
 
 .chatbot-footer{
+  display: none;
   height: 60px;
   width: 100%;
   border-radius: 0 0 15px 15px;
@@ -412,5 +421,31 @@ div.class > a > img:hover{
 
 .submit-chatbot:focus{
   outline: none;
+}
+
+#getting{
+  position: absolute;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 10px;
+  background-color: rgb(40, 85, 122);
+  color : white;
+  border-radius:15px;
+  cursor: pointer;
+}
+
+#getting:hover{
+  background : rgb(192, 131, 17);
+  transition: all ease-in-out 0.4s;
+}
+
+.res-messages001 .res-messages a{
+  color : blue;
+  margin-left:5px;
+}
+
+.res-messages001 .res-messages a:hover{
+  text-decoration: underline !important;
 }
 

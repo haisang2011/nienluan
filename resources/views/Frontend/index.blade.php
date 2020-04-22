@@ -24,6 +24,7 @@
 
     <div class="chatbot-circle"><i class="fas fa-sms"></i></div>
     <div class="chatbot-box">
+        <div id="getting">Nhấn Vào để Bắt Đầu</div>
         <div class="chatbot-head">
             <div class="avatar">
                 <span class="icon"><img src="{{asset('chatbot.png')}}" width="30" height="30" alt="Avatar Chatbot"></span>
@@ -32,7 +33,7 @@
             </div>
             <span class="close"><i class="fas fa-times"></i></span>
         </div>
-        <div class="chatbot-body">
+        <div class="chatbot-body" id="chat-body">
             <div style="margin-top:15px;"></div>
             {{-- Section Messages --}}
             {{-- <div class="res-bot">
@@ -76,16 +77,16 @@
         @foreach($tinmoinhat as $tinmoinhat_2)
         <div class="col-lg-6 mt-5">
             <div class="class">
-                <a href="{{url('/trangchu/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'/'.$tinmoinhat_2->tt_ma)}}">
+                <a href="{{url('/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'/'.$tinmoinhat_2->tt_ma)}}">
                     <img src="{{asset('storage/photos/'.$tinmoinhat_2->tt_hinhAnh)}}" class="image-section-one image" alt="">
                 </a>
                 <div class="overall">
                     <div class="loaitin">
-                        <a href="{{url('/trangchu/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'.html')}}" style="color:white">{{$tinmoinhat_2->lt_ten}}</a>
+                        <a href="{{url('/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'.html')}}" style="color:white">{{$tinmoinhat_2->lt_ten}}</a>
                     </div>
                     <div class="overall-content">
                         <h5>
-                            <a href="{{url('/trangchu/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'/'.$tinmoinhat_2->tt_ma)}}" style="color:white">
+                            <a href="{{url('/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'/'.$tinmoinhat_2->tt_ma)}}" style="color:white">
                                 {{$tinmoinhat_2->tt_tieuDe}}
                             </a>
                         </h5>
@@ -135,16 +136,16 @@ $loaitin1 = $tin->shift();
 <div class="col-lg-8 mt-5 img750">
     <div class="edit">
         <div class="class">
-        <a href="{{url('/trangchu/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'/'.$loaitin1->tt_ma)}}">
+        <a href="{{url('/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'/'.$loaitin1->tt_ma)}}">
             <img src="{{asset('storage/photos/'.$loaitin1->tt_hinhAnh)}}" class="image" alt="">
             </a>
         </div>
             <div class="overall">
                 <div class="loaitin">
-                <a href="{{url('/trangchu/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'.html')}}">{{$loaitin1->lt_ten}}</a>
+                <a href="{{url('/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'.html')}}">{{$loaitin1->lt_ten}}</a>
                 </div>
             <h5>
-                <a href="{{url('/trangchu/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'/'.$loaitin1->tt_ma)}}" style="color:white">{{$loaitin1->tt_tieuDe}}</a>
+                <a href="{{url('/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'/'.$loaitin1->tt_ma)}}" style="color:white">{{$loaitin1->tt_tieuDe}}</a>
             </h5>
             </div>
     </div>
@@ -154,19 +155,19 @@ $loaitin1 = $tin->shift();
         @foreach($tin->all() as $tins)
         <div class="col-lg-6 mt-5">
             <div class="class">
-            <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+            <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                 <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
             </a>
         </div>
             <div class="overall-2">
                 <div class="loaitin">
-                    <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
+                    <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
                 </div>
                 <div class="ngayviet">
                     <i><span>{{date('d/m/Y | H:i',strtotime($tins->tt_capNhat))}}</span></i>
                 </div>
                 <h5>
-                <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a>
+                <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a>
                 </h5>
             </div>
         </div>
@@ -191,13 +192,13 @@ $loaitin1 = $tin->shift();
     @foreach($docnhieu as $docnhieus)
         <div class="row">
             <div class="col-lg-4 col-4 mt-5">
-                <a href="{{url('/trangchu/'.$docnhieus->tl_tenkhongdau.'/'.$docnhieus->lt_tenkhongdau.'/'.$docnhieus->tt_ma)}}">
+                <a href="{{url('/'.$docnhieus->tl_tenkhongdau.'/'.$docnhieus->lt_tenkhongdau.'/'.$docnhieus->tt_ma)}}">
                 <img src="{{asset('storage/photos/'.$docnhieus->tt_hinhAnh)}}" class="image-90" width="120" height="90" alt="">
                 </a>
             </div>
             <div class="col-lg-8 col-8 mt-5">
                 <strong>
-                    <a style="font-size:13px;" href="{{url('/trangchu/'.$docnhieus->tl_tenkhongdau.'/'.$docnhieus->lt_tenkhongdau.'/'.$docnhieus->tt_ma)}}">
+                    <a style="font-size:13px;" href="{{url('/'.$docnhieus->tl_tenkhongdau.'/'.$docnhieus->lt_tenkhongdau.'/'.$docnhieus->tt_ma)}}">
                         {{$docnhieus->tt_tieuDe}}
                     </a>
                   </strong>
@@ -230,17 +231,17 @@ $loaitin1 = $tin->shift();
               @foreach($tin_theloai3 as $tins)
               <div class="col-lg-12 mt-5">
                   <div class="class">
-                  <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                  <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                       <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
                   </a>
                 </div>
                   <div class="overall">
                       <div class="loaitin">
-                          <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
+                          <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
                       </div>
                       <div class="overall-content">
                         <h5>
-                          <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                          <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                               {{$tins->tt_tieuDe}}
                           </a>
                         </h5>
@@ -288,17 +289,17 @@ $loaitin1 = $tin->shift();
   @foreach($tin_theloai4 as $tins)
   <div class="col-lg-4 mt-5">
       <div class="class">
-      <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+      <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
           <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
       </a>
     </div>
       <div class="overall">
           <div class="loaitin">
-              <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
+              <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
           </div>
           <div class="overall-content">
             <h5>
-              <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+              <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                    {{$tins->tt_tieuDe}}
               </a>
             </h5>
@@ -336,7 +337,7 @@ $loaitin1 = $tin->shift();
 // 35% -> 19 letters
 //>19 ---
 // 65% -> > 19 letters
-                
+
             socket.on('my response', function(msg) {
                     console.log(msg)
                 });
@@ -368,12 +369,49 @@ $loaitin1 = $tin->shift();
                 }
 
                 $(".type-message").val("");
+                //
+                var l = document.getElementsByClassName("res-u").length;
+                document.getElementsByClassName("res-u")[l-1].scrollIntoView();
+            });
+            $('.type-message').keypress(function (e) {
+                if (e.which == 13) {
+                    var message = $(".type-message").val();
+                    var check_letters = 1;
+                    var messages = message.length
+                    socket.emit('Client-Send-Data', {data:message});
+
+                    if(messages <= 7){
+
+                    }else if(messages > 7 && messages <= 9){
+                        check_letters = 2;
+                    }else if(messages > 9 && messages <= 19){
+                        check_letters = 3;
+                    }else{
+                        check_letters = 4;
+                    }
+
+                    if(check_letters == 1){
+                        $(".chatbot-body").append('<div class="res-u"><div class="block-messages-u" style="width:15%; text-align:center;"><div class="res-messages-u"><span>'+message+'</span></div></div></div><div style="clear:both;" class="bottom"></div>');
+                    }else if(check_letters == 2){
+                        $(".chatbot-body").append('<div class="res-u"><div class="block-messages-u" style="width:20%; text-align:center;"><div class="res-messages-u"><span>'+message+'</span></div></div></div><div style="clear:both;" class="bottom"></div>');
+                    }else if(check_letters == 3){
+                        $(".chatbot-body").append('<div class="res-u"><div class="block-messages-u" style="width:35%; text-align:center;"><div class="res-messages-u"><span>'+message+'</span></div></div></div><div style="clear:both;" class="bottom"></div>');
+                    }else{
+                        $(".chatbot-body").append('<div class="res-u"><div class="block-messages-u" style="width:65%"><div class="res-messages-u"><span>'+message+'</span></div></div></div><div style="clear:both;" class="bottom"></div>');
+                    }
+
+                    $(".type-message").val("");
+                    //XU LY SCROLL
+                    var l = document.getElementsByClassName("res-u").length;
+                    document.getElementsByClassName("res-u")[l-1].scrollIntoView();
+                    //////////////////////////////////////////////////////////////////
+                }
 
             });
             
 
             socket.on('Server-Send-Data', function(data){
-
+                
                 var message = data['data'];
                 var check = 1;
                 var messages = message.length
@@ -389,25 +427,51 @@ $loaitin1 = $tin->shift();
                 }
 
                 if(check == 1){
-                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages"><span>'+message+'</span> </div></div></div><div style="clear:both;"></div>');
+                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages001"><span>'+'<img src="css/real.gif" width="50" height="50">'+'</span> </div></div></div><div style="clear:both;" class="bottom"></div>');
                     $(".block-messages:last").css({"width":"15%","text-align":"center"});
+                    setTimeout(() => {
+                        $(".res-messages001:last").html('<div class="res-messages"><span>'+message+'</span></div>');
+                    }, 3000);
                 }else if(check == 2){
-                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages"><span>'+message+'</span> </div></div></div><div style="clear:both;"></div>');
+                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages001"><span>'+'<img src="css/real.gif" width="50" height="50">'+'</span> </div></div></div><div style="clear:both;" class="bottom"></div>');
                     $(".block-messages:last").css({"width":"20%","text-align":"center"});
+                    setTimeout(() => {
+                        $(".res-messages001:last").html('<div class="res-messages"><span>'+message+'</span></div>');
+                    }, 3000);
                 }else if(check == 3){
-                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages"><span>'+message+'</span> </div></div></div><div style="clear:both;"></div>');
-                    $(".block-messages:last").css({"width":"35%","text-align":"center"});
+                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages001"><span>'+'<img src="css/real.gif" width="50" height="50">'+'</span> </div></div></div><div style="clear:both;" class="bottom"></div>');
+                    $(".block-messages:last").css({"width":"40%","text-align":"center"});
+                    setTimeout(() => {
+                        $(".res-messages001:last").html('<div class="res-messages"><span>'+message+'</span></div>');
+                    }, 3000);
                 }else{
-                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages"><span>'+message+'</span> </div></div></div><div style="clear:both;"></div>');
+                    $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages001"><span>'+'<img src="css/real.gif" width="50" height="50">'+'</span> </div></div></div><div style="clear:both;" class="bottom"></div>');
                     $(".block-messages:last").css("width","65%");
+                    setTimeout(() => {
+                        $(".res-messages001:last").html('<div class="res-messages"><span>'+message+'</span></div>');
+                    }, 3000);
                 }
+                var l = document.getElementsByClassName("res-bot").length;
+                document.getElementsByClassName("res-bot")[l-1].scrollIntoView();
+                                
             });
 
             //End ChatBot
 
+            $("#getting").click(function(){
+                $("#getting").css({"display":"none"});
+                $(".chatbot-footer").css("display","block");
+                //Greeting First
+                $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages000"><span>'+'<img src="css/real.gif" width="50" height="50">'+'</span> </div></div></div><div style="clear:both;"></div>');
+                setTimeout(() => {
+                    $(".res-messages000").html('<div class="res-messages"><span>'+'Kinh Chao Quy Khach Den Voi WEBSITE Cua Chung Tui @'+'</span></div>')
+                }, 3000);
+            });
+
             $(".close").click(function(){
                 $(".chatbot-box").css("display","none");
                 $('.chatbot-circle').css('display','block');
+                //$("#getting").css({"display":"block"});
             });
 
             $('.chatbot-circle').click(function(){

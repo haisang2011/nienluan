@@ -29,14 +29,14 @@
                         ?>
                         <div class="edit">
                             <div class="class">
-                                <a href="{{url('/trangchu/'.$tin1->tl_tenkhongdau.'/'.$tin1->lt_tenkhongdau.'/'.$tin1->tt_ma)}}">
+                                <a href="{{url('/'.$tin1->tl_tenkhongdau.'/'.$tin1->lt_tenkhongdau.'/'.$tin1->tt_ma)}}">
                                         <img src="{{asset('storage/photos/'.$tin1->tt_hinhAnh)}}" class="image" alt="">
                                 </a>
                             </div>
                                             <div class="overall"> <!-- cho nay gan cung style -->
                                                 <div class="overall-content">
                                                     <h5>
-                                                        <a href="{{url('/trangchu/'.$tin1->tl_tenkhongdau.'/'.$tin1->lt_tenkhongdau.'/'.$tin1->tt_ma)}}">
+                                                        <a href="{{url('/'.$tin1->tl_tenkhongdau.'/'.$tin1->lt_tenkhongdau.'/'.$tin1->tt_ma)}}">
                                                             <strong>{{$tin1->tt_tieuDe}}</strong>
                                                         </a>
                                                     </h5>
@@ -51,13 +51,13 @@
                             @foreach($tin2 as $tins)
                             <div class="col-lg-6">
                                 <div class="class">
-                                    <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                                    <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                                             <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
                                     </a>
                                 </div>
                                     <div class="mt-3">
                                         <h5>
-                                            <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                                            <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                                                 {{$tins->tt_tieuDe}}
                                             </a>
                                         </h5>
@@ -81,14 +81,14 @@
                             <!----------------------------------- --------------------------------------------->
                             <div class="col-lg-6 mb-3">  <!-- Sub Col 6 -->
                                 <div class="class">
-                                    <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                                    <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                                         <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
                                     </a>
                                 </div>
                             </div>  <!-- End Sub Col 6 -->
 
                             <div class="col-lg-6"> <!-- Sub Col 6 -->
-                                <h5><a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a></h5>
+                                <h5><a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a></h5>
                                 <div class="ngayviet">
                                         <i><span>{{date('d/m/Y | H:i',strtotime($tins->tt_capNhat))}}</span></i>
                                     </div>
@@ -103,13 +103,13 @@
                     @foreach($tintuc->all() as $tins)
                     <div class="col-lg-4 mb-5">
                         <div class="class">
-                            <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                            <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                                 <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-8 mb-5">
-                        <h5><strong><a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a></strong></h5>
+                        <h5><strong><a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a></strong></h5>
                         <div class="ngayviet">
                                 <i><span>{{date('d/m/Y | H:i',strtotime($tins->tt_capNhat))}}</span></i>
                             </div>

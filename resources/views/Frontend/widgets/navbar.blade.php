@@ -39,7 +39,7 @@
                         <div class="sub-menu" style="background:#639630;">
                             {{-- Loop Loai Tin  --}}
                             @foreach($category->LoaiTin->all() as $loaitins)
-                                <a class="dropdown-item menu-sub-custom" href="{{url('/trangchu/'. $category->tl_tenkhongdau.'/'.$loaitins->lt_tenkhongdau.'.html')}}">{{$loaitins->lt_ten}}</a>
+                                <a class="dropdown-item menu-sub-custom" href="{{url('/'. $category->tl_tenkhongdau.'/'.$loaitins->lt_tenkhongdau.'.html')}}">{{$loaitins->lt_ten}}</a>
                             @endforeach
                             {{-- End Loop Loai Tin  --}}
                         </div>

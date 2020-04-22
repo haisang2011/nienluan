@@ -10,21 +10,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 //FrontEnd
-Route::get('/trangchu', 'Frontend\FrontendController@index')->name('Frontend.index');
+Route::get('/', 'Frontend\FrontendController@index')->name('Frontend.index');
 Route::get('/trangchu1', 'Frontend\FrontendController@index_category')->name('Frontend.index_category');
 
-Route::get('/trangchu/{the_loai}.html', 'Frontend\FrontendController@show')->name('Frontend.show');
-Route::get('/trangchu/{the_loai}/{loaitin}.html', 'Frontend\FrontendController@loaitin')->name('Frontend.loaitin');
-Route::get('/trangchu/{the_loai}/{loaitin}/{tintuc}', 'Frontend\FrontendController@tintuc')->name('Frontend.tintuc');
+Route::get('/{the_loai}.html', 'Frontend\FrontendController@show')->name('Frontend.show');
+Route::get('/{the_loai}/{loaitin}.html', 'Frontend\FrontendController@loaitin')->name('Frontend.loaitin');
+Route::get('/{the_loai}/{loaitin}/{tintuc}', 'Frontend\FrontendController@tintuc')->name('Frontend.tintuc');
 
 Route::post('/timkiem', 'Frontend\FrontendController@timkiem')->name('timkiem');
 
