@@ -1,0 +1,113 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["chào", "xin chào", "lâu quá mới gặp", "hi", "hello"],
+         "responses": ["Xin Chào!!!", "Oh Lâu quá mới gặp!", "Có chuyện gì vậy?", "Mình có thể giúp gì cho bạn?"],
+         "context_set": ""
+        },
+        {"tag": "healthy",
+        "patterns": ["dạo này ổn không?", "khỏe không", "dạo này thế nào rồi", "bạn khỏe không", "bạn ổn chứ"],
+        "responses": ["Mình khỏe Nhe!", "Mình vẫn ổn", "Vẫn còn đủ sức để chat với bạn nè"],
+        "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["tạm biệt", "hẹn gặp lại sau", "dịp khác gặp mặt", "hôm sau gặp lại", "chúc một ngày tốt lành"],
+         "responses": ["Tạm Biệt!!!", "Nói chuyện sau nhe", "Bye gặp lại sau!!!"],
+         "context_set": ""
+        },
+        {"tag": "age",
+         "patterns": ["bạn được tạo ra từ bao lâu rồi?", "bạn bao nhiêu tuổi vậy?", "nhiêu tuổi rồi", "bạn mấy tuổi vậy", "mấy tuổi rồi"],
+         "responses": ["Tôi được tạo cách nay 2 tháng trước!", "Tôi Vừa tròn 2 tháng tuổi!", "2 tháng tuổi rồi bạn ạ!"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["bạn tên gì vậy", "tôi có thể gọi bạn sao", "tên của bạn là gì?"],
+         "responses": ["Bạn có thể gọi tui là CB News.", "Tôi là CB News!", "CB News Là Tên Tui."],
+         "context_set": ""
+        },
+        {"tag": "who_created",
+         "patterns": ["ai thiết kế ra bạn vậy?", "ai tạo ra bạn vậy?", "bạn được ai tạo ra vậy?"],
+         "responses": ["Hải Sang đã tạo ra tôi!", "Tui được tạo ra từ Hải Sang"],
+         "context_set": ""
+        },
+        {"tag": "change_password",
+        "patterns": ["tôi muốn thay đổi mật khẩu?", "đổi mật khẩu ở chỗ nào?", "trang để đổi mật khẩu?","đổi mật khẩu","đổi mật khẩu ở đâu"],
+        "responses": ["http://localhost/changepassword"],
+        "context_set": "1"
+        },
+        {"tag": "lich_thi_dau",
+                "patterns": ["lịch thi đấu bóng đá", "có tin lịch thi đấu không","cho tôi đến trang lịch thi đấu", "trang web này có lịch thi đấu bóng đá không", "lịch thi đấu"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/bong-da/lich-thi-dau.html'>Lịch thi đấu</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/bong-da/lich-thi-dau.html'>Lịch thi đấu</a>", "<a href='http://localhost/trangchu/bong-da/lich-thi-dau.html'>Lịch thi đấu</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "bong_da_vn",
+                "patterns": ["bóng đá việt nam", "trang web này có tin bóng đá Việt Nam không","cho tôi đến trang bóng đá việt nam", "có tin bóng đá việt nam không", "tin Bóng Đá Việt Nam"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/bong-da/bong-da-viet-nam.html'>Bóng đá Việt Nam</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/bong-da/bong-da-viet-nam.html'>Bóng đá Việt Nam</a>", "<a href='http://localhost/trangchu/bong-da/bong-da-viet-nam.html'>Bóng đá Việt Nam</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "bong_da_ngoaihanganh",
+                "patterns": ["bóng đá anh","ngoại hạng anh","cho tôi đến trang bóng đá anh", "trang web này có tin bóng đá anh không","trang web này có tin ngoại hạng anh không", "tin bóng đá ngoại hạng anh"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/bong-da/ngoai-hang-anh.html'>Ngoại hạng anh</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/bong-da/ngoai-hang-anh.html'>Ngoại hạng anh</a>", "<a href='http://localhost/trangchu/bong-da/ngoai-hang-anh.html'>Ngoại hạng anh</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "diem_nong",
+                "patterns": ["điểm nóng","tin điểm nóng","trang web này có tin Điểm nóng không","cho tôi đến trang điểm nóng"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/the-gioi/diem-nong.html'>Điểm nóng</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/the-gioi/diem-nong.html'>Điểm nóng</a>", "<a href='http://localhost/trangchu/the-gioi/diem-nong.html'>Điểm nóng</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "quan_su",
+                "patterns": ["quân sự","tin Quân sự", "tin về quân sự", "đường dẫn đến quân sự", "cho tôi đến trang quân sự","trang web này có tin quân sự không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/the-gioi/quan-su.html'>Quân sự</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/the-gioi/quan-su.html'>Quân sự</a>", "<a href='http://localhost/trangchu/the-gioi/quan-su.html'>Quân sự</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "tg_dong_vat",
+                "patterns": ["thế giới động vật","tin về giới thế động vật","cho tôi đến trang thới giới động vật","tin thế giới động vật","cho tôi đường dẫn đến thế giới động vật","trang web này có tin thế giới động vật không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/the-gioi/the-gioi-dong-vat.html'>Thế giới động vật</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/the-gioi/the-gioi-dong-vat.html'>Thế giới động vật</a>", "<a href='http://localhost/trangchu/the-gioi/the-gioi-dong-vat.html'>Thế giới động vật</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "tt_congso",
+                "patterns": ["thời trang công sở","tin thời trang công sở", "cho tôi đến trang thời trang công sở","trang web này có tin thời trang công sở không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/thoi-trang/thoi-trang-cong-so.html'>Thời trang công sở</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/thoi-trang/thoi-trang-cong-so.html'>Thời trang công sở</a>", "<a href='http://localhost/trangchu/thoi-trang/thoi-trang-cong-so.html'>Thời trang công sở</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "xu_huong_tt",
+                "patterns": ["xu hướng thời trang","tin Xu hướng thời trang", "cho tôi đến trang xu hướng thời trang","trang web này có tin xu hướng thời trang không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/thoi-trang/xu-huong-thoi-trang.html'>Xu hướng thời trang</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/thoi-trang/xu-huong-thoi-trang.html'>Xu hướng thời trang</a>", "<a href='http://localhost/trangchu/thoi-trang/xu-huong-thoi-trang.html'>Xu hướng thời trang</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "nguoi_mau",
+                "patterns": ["người mẫu hoa hậu","người mẫu","Hoa hậu","cho tôi đến trang người mẫu hoa hậu","Tin người mẫu hoa hậu","Tin người mẫu","tin hoa hậu", "trang web này có tin người mẫu hoa hậu không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/thoi-trang/nguoi-mau-hoa-hau.html'>Người mẫu hoa hậu</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/thoi-trang/nguoi-mau-hoa-hau.html'>Người mẫu hoa hậu</a>", "<a href='http://localhost/trangchu/thoi-trang/nguoi-mau-hoa-hau.html'>Người mẫu hoa hậu</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "te_nan_xa_hoi",
+                "patterns": ["tệ nạn xã hội","tin tệ nạn xã hội", "cho tôi đến trang tệ nạn xã hội", "trang web này có tin tệ nạn xã hội không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/phap-luat/te-nan-xa-hoi.html'>Tệ nạn xã hội</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/phap-luat/te-nan-xa-hoi.html'>Tệ nạn xã hội</a>", "<a href='http://localhost/trangchu/phap-luat/te-nan-xa-hoi.html'>Tệ nạn xã hội</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "canh_giac",
+                "patterns": ["cảnh giác","tin cảnh giác","cho tôi đến trang cảnh giác", "trang web này có tin cảnh giác không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/phap-luat/canh-giac.html'>Cảnh giác</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/phap-luat/canh-giac.html'>Cảnh giác</a>", "<a href='http://localhost/trangchu/phap-luat/canh-giac.html'>Cảnh giác</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "ho_so_vu_an",
+                "patterns": ["hồ sơ vụ án","tin hồ sơ vụ án","cho tôi đến trang hồ sơ vụ án", "trang web này có tin hồ sơ vụ án không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/phap-luat/ho-so-vu-an.html'>Hồ sơ vụ án</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/phap-luat/ho-so-vu-an.html'>Hồ sơ vụ án</a>", "<a href='http://localhost/trangchu/phap-luat/ho-so-vu-an.html'>Hồ sơ vụ án</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "doanh_nhan",
+                "patterns": ["doanh nhân","tin doanh nhân", "cho tôi đến trang doanh nhan", "trang web này có tin doanh nhân không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/kinh-doanh/doanh-nhan.html'>Doanh nhân</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/kinh-doanh/doanh-nhan.html'>Doanh nhân</a>", "<a href='http://localhost/trangchu/kinh-doanh/doanh-nhan.html'>Doanh nhân</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "tai_chinh",
+                "patterns": ["tài chính","tin tài chính", "cho tôi đến trang tài chính","trang web này có tin tài chính không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/kinh-doanh/tai-chinh.html'>Tài chính</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/kinh-doanh/tai-chinh.html'>Tài chính</a>", "<a href='http://localhost/trangchu/kinh-doanh/tai-chinh.html'>Tài chính</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        },
+        {"tag": "khoi_nghiep",
+                "patterns": ["khởi nghiệp","tin Khởi nghiệp", "cho tôi đến trang khởi nghiệp","trang web này có tin khởi nghiệp không"],
+                "responses": ["Có phải bạn đang tìm kiếm bảng tin này không? <a href='http://localhost/trangchu/kinh-doanh/khoi-nghiep.html'>Khởi nghiệp</a>","Bạn đang tìm kiếm: <a href='http://localhost/trangchu/kinh-doanh/khoi-nghiep.html'>Khởi nghiệp</a>", "<a href='http://localhost/trangchu/kinh-doanh/khoi-nghiep.html'>Khởi nghiệp</a> Đây có phải là cái bạn đang kiếm"],
+                "context_set": ""
+        }
+    ]
+    }

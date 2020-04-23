@@ -11,6 +11,7 @@
     <title>Hello, world!</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/frontend.css')}}">
+    <link rel="stylesheet" type="text/css" href="http://www.example.com/style.css?ts=<?=time()?>" />
   </head>
   <body>
     <!-- Header -->
@@ -77,16 +78,16 @@
         @foreach($tinmoinhat as $tinmoinhat_2)
         <div class="col-lg-6 mt-5">
             <div class="class">
-                <a href="{{url('/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'/'.$tinmoinhat_2->tt_ma)}}">
+                <a href="{{url('/trangchu/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'/'.$tinmoinhat_2->tt_ma)}}">
                     <img src="{{asset('storage/photos/'.$tinmoinhat_2->tt_hinhAnh)}}" class="image-section-one image" alt="">
                 </a>
                 <div class="overall">
                     <div class="loaitin">
-                        <a href="{{url('/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'.html')}}" style="color:white">{{$tinmoinhat_2->lt_ten}}</a>
+                        <a href="{{url('/trangchu/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'.html')}}" style="color:white">{{$tinmoinhat_2->lt_ten}}</a>
                     </div>
                     <div class="overall-content">
                         <h5>
-                            <a href="{{url('/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'/'.$tinmoinhat_2->tt_ma)}}" style="color:white">
+                            <a href="{{url('/trangchu/'.$tinmoinhat_2->tl_tenkhongdau.'/'.$tinmoinhat_2->lt_tenkhongdau.'/'.$tinmoinhat_2->tt_ma)}}" style="color:white">
                                 {{$tinmoinhat_2->tt_tieuDe}}
                             </a>
                         </h5>
@@ -136,16 +137,16 @@ $loaitin1 = $tin->shift();
 <div class="col-lg-8 mt-5 img750">
     <div class="edit">
         <div class="class">
-        <a href="{{url('/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'/'.$loaitin1->tt_ma)}}">
+        <a href="{{url('/trangchu/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'/'.$loaitin1->tt_ma)}}">
             <img src="{{asset('storage/photos/'.$loaitin1->tt_hinhAnh)}}" class="image" alt="">
             </a>
         </div>
             <div class="overall">
                 <div class="loaitin">
-                <a href="{{url('/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'.html')}}">{{$loaitin1->lt_ten}}</a>
+                <a href="{{url('/trangchu/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'.html')}}">{{$loaitin1->lt_ten}}</a>
                 </div>
             <h5>
-                <a href="{{url('/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'/'.$loaitin1->tt_ma)}}" style="color:white">{{$loaitin1->tt_tieuDe}}</a>
+                <a href="{{url('/trangchu/'.$loaitin1->tl_tenkhongdau.'/'.$loaitin1->lt_tenkhongdau.'/'.$loaitin1->tt_ma)}}" style="color:white">{{$loaitin1->tt_tieuDe}}</a>
             </h5>
             </div>
     </div>
@@ -155,19 +156,19 @@ $loaitin1 = $tin->shift();
         @foreach($tin->all() as $tins)
         <div class="col-lg-6 mt-5">
             <div class="class">
-            <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+            <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                 <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
             </a>
         </div>
             <div class="overall-2">
                 <div class="loaitin">
-                    <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
+                    <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
                 </div>
                 <div class="ngayviet">
                     <i><span>{{date('d/m/Y | H:i',strtotime($tins->tt_capNhat))}}</span></i>
                 </div>
                 <h5>
-                <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a>
+                <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">{{$tins->tt_tieuDe}}</a>
                 </h5>
             </div>
         </div>
@@ -192,13 +193,13 @@ $loaitin1 = $tin->shift();
     @foreach($docnhieu as $docnhieus)
         <div class="row">
             <div class="col-lg-4 col-4 mt-5">
-                <a href="{{url('/'.$docnhieus->tl_tenkhongdau.'/'.$docnhieus->lt_tenkhongdau.'/'.$docnhieus->tt_ma)}}">
+                <a href="{{url('/trangchu/'.$docnhieus->tl_tenkhongdau.'/'.$docnhieus->lt_tenkhongdau.'/'.$docnhieus->tt_ma)}}">
                 <img src="{{asset('storage/photos/'.$docnhieus->tt_hinhAnh)}}" class="image-90" width="120" height="90" alt="">
                 </a>
             </div>
             <div class="col-lg-8 col-8 mt-5">
                 <strong>
-                    <a style="font-size:13px;" href="{{url('/'.$docnhieus->tl_tenkhongdau.'/'.$docnhieus->lt_tenkhongdau.'/'.$docnhieus->tt_ma)}}">
+                    <a style="font-size:13px;" href="{{url('/trangchu/'.$docnhieus->tl_tenkhongdau.'/'.$docnhieus->lt_tenkhongdau.'/'.$docnhieus->tt_ma)}}">
                         {{$docnhieus->tt_tieuDe}}
                     </a>
                   </strong>
@@ -231,17 +232,17 @@ $loaitin1 = $tin->shift();
               @foreach($tin_theloai3 as $tins)
               <div class="col-lg-12 mt-5">
                   <div class="class">
-                  <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                  <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                       <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
                   </a>
                 </div>
                   <div class="overall">
                       <div class="loaitin">
-                          <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
+                          <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
                       </div>
                       <div class="overall-content">
                         <h5>
-                          <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                          <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                               {{$tins->tt_tieuDe}}
                           </a>
                         </h5>
@@ -289,17 +290,17 @@ $loaitin1 = $tin->shift();
   @foreach($tin_theloai4 as $tins)
   <div class="col-lg-4 mt-5">
       <div class="class">
-      <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+      <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
           <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" class="image" alt="">
       </a>
     </div>
       <div class="overall">
           <div class="loaitin">
-              <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
+              <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
           </div>
           <div class="overall-content">
             <h5>
-              <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+              <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                    {{$tins->tt_tieuDe}}
               </a>
             </h5>
@@ -327,7 +328,7 @@ $loaitin1 = $tin->shift();
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
+    <script src="{{asset('vendor/vendor/jquery/jquery.min.js')}}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -464,7 +465,7 @@ $loaitin1 = $tin->shift();
                 //Greeting First
                 $(".chatbot-body").append('<div class="res-bot"><div class="block-icon"><div class="res-avatar"><i class="fas fa-comment-alt"></i></div></div><div class="block-messages"><div class="res-messages000"><span>'+'<img src="css/real.gif" width="50" height="50">'+'</span> </div></div></div><div style="clear:both;"></div>');
                 setTimeout(() => {
-                    $(".res-messages000").html('<div class="res-messages"><span>'+'Kinh Chao Quy Khach Den Voi WEBSITE Cua Chung Tui @'+'</span></div>')
+                    $(".res-messages000").html('<div class="res-messages"><span>'+'Kính Chào Qúy Khách Đến Với WEBSITE Của Chúng Tui @'+'</span></div>')
                 }, 3000);
             });
 

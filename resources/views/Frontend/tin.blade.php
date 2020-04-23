@@ -50,17 +50,17 @@
                         @foreach($tinlienquan as $tlq)
                             @if($i == 0)
                                 <div class="col-lg-5">
-                                        <a href="{{url('/'.$tlq->tl_tenkhongdau.'/'.$tlq->lt_tenkhongdau.'/'.$tlq->tt_ma)}}"><img src="{{asset('storage/photos/'.$tlq->tt_hinhAnh)}}" width="150" height="100" alt=""></a>
+                                        <a href="{{url('/trangchu/'.$tlq->tl_tenkhongdau.'/'.$tlq->lt_tenkhongdau.'/'.$tlq->tt_ma)}}"><img src="{{asset('storage/photos/'.$tlq->tt_hinhAnh)}}" width="150" height="100" alt=""></a>
                                 </div>
                                 <div class="col-lg-7">
-                                    <a style="font-size:14px;" href="{{url('/'.$tlq->tl_tenkhongdau.'/'.$tlq->lt_tenkhongdau.'/'.$tlq->tt_ma)}}"><strong>{{$tlq->tt_tieuDe}}</strong></a>
+                                    <a style="font-size:14px;" href="{{url('/trangchu/'.$tlq->tl_tenkhongdau.'/'.$tlq->lt_tenkhongdau.'/'.$tlq->tt_ma)}}"><strong>{{$tlq->tt_tieuDe}}</strong></a>
                                 </div>
                             @else
                                 <div class="col-lg-5 mt-4">
-                                        <a href="{{url('/'.$tlq->tl_tenkhongdau.'/'.$tlq->lt_tenkhongdau.'/'.$tlq->tt_ma)}}"><img src="{{asset('storage/photos/'.$tlq->tt_hinhAnh)}}" width="150" height="100" alt=""></a>
+                                        <a href="{{url('/trangchu/'.$tlq->tl_tenkhongdau.'/'.$tlq->lt_tenkhongdau.'/'.$tlq->tt_ma)}}"><img src="{{asset('storage/photos/'.$tlq->tt_hinhAnh)}}" width="150" height="100" alt=""></a>
                                 </div>
                                 <div class="col-lg-7 mt-4">
-                                    <a style="font-size:14px;" href="{{url('/'.$tlq->tl_tenkhongdau.'/'.$tlq->lt_tenkhongdau.'/'.$tlq->tt_ma)}}"><strong>{{$tlq->tt_tieuDe}}</strong></a>
+                                    <a style="font-size:14px;" href="{{url('/trangchu/'.$tlq->tl_tenkhongdau.'/'.$tlq->lt_tenkhongdau.'/'.$tlq->tt_ma)}}"><strong>{{$tlq->tt_tieuDe}}</strong></a>
                                 </div>
                             @endif
                             <?php

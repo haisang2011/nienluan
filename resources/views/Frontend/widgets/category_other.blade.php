@@ -39,7 +39,7 @@ $tinmoinhat = $tinmoinhat->pluck('tt_ma');
         @foreach($tin as $tins)
         <div class="col-lg-4 mb-5">
           <div class="class">
-          <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+          <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
             <img src="{{asset('storage/photos/'.$tins->tt_hinhAnh)}}" width="350" height="200" alt="">
           </a>
           </div>
@@ -47,13 +47,13 @@ $tinmoinhat = $tinmoinhat->pluck('tt_ma');
         <div class="col-lg-8 mb-5">
             <div class="tieude">
                 <h5 style="font-weight : bold;">
-                  <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
+                  <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'/'.$tins->tt_ma)}}">
                       {{$tins->tt_tieuDe}}
                   </a>
                 </h5>
               </div>
                 <div class="loaitin">
-                    <a href="{{url('/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
+                    <a href="{{url('/trangchu/'.$tins->tl_tenkhongdau.'/'.$tins->lt_tenkhongdau.'.html')}}">{{$tins->lt_ten}}</a>
                 </div>
                 <div class="ngayviet">
                     <i><span>{{date('d/m/Y | H:i',strtotime($tins->tt_capNhat))}}</span></i>

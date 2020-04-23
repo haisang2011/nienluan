@@ -362,7 +362,7 @@ div.class > a > img:hover{
 }
 
 .block-messages-u{
-  text-align: justify;
+  text-align: left;
   float: right;
   width : 70%;
   margin-right: 15px;
